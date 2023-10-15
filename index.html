@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="java_script.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <div class="cats">
+    <button id="btn_previous">Previous</button>
+    <button id="btn_next">Next</button> 
+    <img src="./assets/images/cat4.jpg"  id="galleryImage" alt="cat"> 
+</div>
+</div>
+<script>
+const image1 = "./assets/images/cat4.jpg";
+const image2 = "./assets/images/cat2.jpg";
+
+const galleryImage= document.getElementById("galleryImage");
+const btn_previous=document.getElementById("btn_previous");
+const btn_next=document.getElementById("btn_next");
+
+
+let currentImage=image1;
+
+function changeImage(){
+    galleryImage.src = image2;  
+}
+
+btn_next.addEventListener("click",()=>{
+    currentImage=image1;
+    changeImage();
+})
+
+btn_previous.addEventListener("click",()=>{
+    currentImage=image1;
+    changeImage();
+})
+
+</script>
+</body>
+</html>
